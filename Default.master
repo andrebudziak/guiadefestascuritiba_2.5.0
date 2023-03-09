@@ -1,0 +1,293 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Default.master.cs" Inherits="_Default" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head id="Head1" runat="server">
+    <title>Guia de Festas Curitiba</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!--   <link id="CssSite3" href="css/font-awesome.css" runat="server" rel="stylesheet" type="text/css">
+    <link id="CssSite4" href="css/docs.css" runat="server" rel="stylesheet" type="text/css">
+    
+    <link id="CssSite6" href="css/bootstrap.min.css" runat="server" rel="stylesheet" type="text/css">
+    <link id="CssSite7" href="css/bootstrap.css" runat="server" rel="stylesheet" type="text/css">
+    <link id="CssSite" href="Styles.css" runat="server" rel="stylesheet" type="text/css" />
+     -->
+    <link id="CssSite5" href="css/bootstrap-social.css" runat="server" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Latest compiled and minified CSS -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <meta name="robots" content="index,follow" />
+    <meta name="url" content="www.guiadefestascuritiba.com.br">
+    <meta name="description" content="Tudo para sua festa desde a locação do espaço até a animação, materias para festa, e tudo que voce precisa.">
+    <meta name="keywords" content="15 Anos,Adereços para Festas,Animação / Recreação,Artigos para Festa,Automóveis para Eventos,Bandas e Músicos,
+                                        Bartender,Batizados,Bem-Casados,Biscuit,Bodas,Bolos Artísticos,Bolos/Doces/Salgados,Brinquedos,Buffet em Domicílio,
+                                        Buffet Infantil,Buffet Social,Café Colonial,Caricaturas,Carrinhos Alimentação,Casamentos,Cenários,Cerimonial,
+                                        Cestas Presente,Chá de Bebê,Chá de Lingerie,Chácara,Churrasco,Climatização ,Clubes,Coffe Break,Confraternizações,
+                                        Congelados,Convites/Lembrancinhas,Crepe Frances,Cupcakes,Dança para Eventos,Decoração-Ambientação,Decoração-Balão,
+                                        Decoração-Confecção,Decoração-Tema Infantil,Delivery,Designer de Eventos,Disk Carne,Distribuidoras,Equipamentos para Festa,
+                                        Especial Natal,Eventos Empresariais,Fantasias,Festa Escola,Festa Infantil,Floricultura,Formaturas,Fotografia/Filmagem,
+                                        Garçom,Kit Festa,Locação de Mesas/Cadeiras,Lua de Mel,Mágicos,Massas em Domicilio,Material para Festa,Mesas Especiais,
+                                        Mobiliário para Eventos,Moda Presente,Noivados,Organização de Eventos,Palhaços,Panquecas em Domicilio,Parques,
+                                        Personalização,Prestadores de Serviços,Produção de Eventos,Promotoras/Divulgadoras,Queijos & Vinhos,Recepcionistas e Hostess,
+                                        Retrospectiva Digital,Rodizio Pizza (Domicilio),Salão de Beleza,Salão de Festas,Sanduíches,Som/Iluminação/Djs,
+                                        Sopas em Domicilio,Teatro na Empresa,Telegrama/Serenata,Topo para Bolos,Visitas Papai Noel">
+    <meta name="charset" content="ISO-8859-1">
+    <meta name="autor" content="Andre Budziak Neto">
+    <meta name="revisit-after" content="1">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-7305791-1");
+            pageTracker._trackPageview();
+        } catch (err) { }
+    </script>
+
+
+
+
+    <script type="text/javascript">
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+    <div id="fb-root"></div>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+</head>
+<body class="bs-docs-home">
+    <form id="form1" runat="server">
+
+        <cc1:ToolkitScriptManager ID="ToolkitScriptManager1" ScriptMode="Release" EnablePartialRendering="true" EnableScriptGlobalization="true" runat="server">
+        </cc1:ToolkitScriptManager>
+
+
+        <asp:Label ID="lblCodigoCategoria" runat="server"></asp:Label>
+
+        <asp:Label ID="lblDescricao" runat="server"></asp:Label>
+
+        <asp:Label ID="lblCodigo" runat="server"></asp:Label>
+
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+
+                <!-- Docs master nav -->
+
+
+                <nav class="navbar navbar-default navbar-fixed-top">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="container-fluid">
+                                <div class="col-xs-6 col-md-4">
+                                    <img id="imgLogo" runat="server" src="imagens/logo.png" style="width: 50%; padding-top: 1%;" class="img-responsive" alt="Responsive image" />
+                                </div>
+                                <div class="col-xs-12 col-md-8">
+                                    <div class="input-group" style="padding-top: 1%;">
+                                        <span class="input-group-btn">
+                                            <asp:Button ID="btnBusca" runat="server" class="btn btn-default" OnClick="btnBusca_Click1" Text="Pesquisar" />
+                                        </span>
+                                        <asp:TextBox ID="txtBusca" runat="server" class="form-control" placeholder="  Digite aqui o que deseja pesquisar" Style="width: 40%;"></asp:TextBox>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navBarGuia">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+
+                        <div class="navbar-collapse collapse" id="navBarGuia">
+                            <asp:Label ID="lblLocal" runat="server" Text="Label"></asp:Label>
+                        </div>
+
+
+                    </div>
+
+                </nav>
+
+
+                <!-- Page content of course! -->
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+
+                <div class="container-fluid">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <asp:Label ID="lblIndicators" runat="server" Text=""></asp:Label>
+                        </ol>
+
+                        <asp:Label ID="lblSlide" runat="server" Text="Label"></asp:Label>
+
+                        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <p>
+                </p>
+
+                <div class="bs-docs-featurette">
+
+                    <div class="container">
+
+
+                        <table>
+                            <tr>
+                                <td style="vertical-align: top;">
+                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                        <div class="container-fluid">
+                                        </div>
+                                    </asp:ContentPlaceHolder>
+                                </td>
+                                <td style="width: 20%; vertical-align: top;">
+
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <center><strong><i class="fa fa-bullhorn"></i>   PUBLICIDADE</center>
+                                            </strong></div>
+                                        <div class="panel-body">
+                                            <center>
+                                      Clique e visualize as promoções
+                                  </center>
+                                        </div>
+                                    </div>
+
+
+                                    <asp:UpdatePanel ID="upBanner" UpdateMode="Conditional" runat="server">
+                                        <ContentTemplate>
+
+                                            <asp:DataList ID="dlPublicidade" runat="server"
+                                                OnItemDataBound="dlPublicidade_ItemDataBound"
+                                                OnItemCommand="dlPublicidade_ItemCommand">
+                                                <ItemTemplate>
+
+                                                    <table style="width: 100%;">
+                                                        <tr>
+                                                            <td align="center">
+                                                                <asp:Label ID="lblCodigoBanner" runat="server" Visible="false" Text=""></asp:Label>
+                                                                <a id="dLabelB" href="#" role="button" aria-expanded="false" data-toggle="modal" data-target='#myModalB<%# DataBinder.Eval(Container.DataItem, "codigo") %>'>
+                                                                    <asp:Image ID="imgBanner" class="img-responsive" runat="server" />
+                                                                </a>
+                                                                <p></p>
+                                                            </td>
+
+                                                        </tr>
+                                                    </table>
+
+                                                    <div class="modal fade" id='myModalB<%# DataBinder.Eval(Container.DataItem, "codigo") %>' tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog modal-lg">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                                    <h4 class="modal-title" id="myModalLabel">
+                                                                        <asp:Label ID="lblModalBannerAnuncio" runat="server" Text=""></asp:Label>
+                                                                    </h4>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <asp:HyperLink ID="lnkPublicidadeGrande" Target="_blank" runat="server">
+                                                                        <asp:Image ID="imgBannerPublicidadeGrande" CssClass="img-responsive" runat="server" />
+                                                                    </asp:HyperLink>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </ItemTemplate>
+                                            </asp:DataList>
+
+                                            <div align="right" class="fb-like-box" data-href="http://www.facebook.com/pages/Guia-de-Festas-Curitiba/306204699421943" data-width="220" data-show-faces="true" data-stream="false" data-header="true"></div>
+
+
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
+
+
+
+
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+
+                <footer class="bs-docs-footer" role="contentinfo" style="background-color: GrayText;">
+                    <div class="container-fluid">
+                        <br />
+
+                        <div class="jumbotron">
+                            <a href="http://guiadefestacuritiba.com.br/anuncie-aqui/" target="_blank" role="button">
+                                <img src="../imagens/rodape%20guia.png" style="width:100%;" />
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+
+                <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.0.0.min.js"></script>
+
+                <!-- Latest compiled and minified JavaScript -->
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
+
+                <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+                <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+                <script type="text/javascript">
+                    $('.carousel').carousel({
+                        interval: 15000
+                    })
+                </script>
+
+            </ContentTemplate>
+        </asp:UpdatePanel>
+
+    </form>
+</body>
+</html>

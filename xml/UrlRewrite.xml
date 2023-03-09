@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<urlrewrites>
+
+  <!--Categoria-->
+  <rule>
+    <url>/Categoria/Index.aspx</url>
+    <rewrite>/Index.aspx</rewrite>
+  </rule>
+  <rule>
+    <url>/Categoria/contato.aspx</url>
+    <rewrite>/contato.aspx</rewrite>
+  </rule>
+  
+
+
+</urlrewrites>
